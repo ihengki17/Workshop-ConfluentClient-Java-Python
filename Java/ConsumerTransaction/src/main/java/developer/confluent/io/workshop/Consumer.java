@@ -12,7 +12,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 @RequiredArgsConstructor
 public class Consumer {
 
-  @KafkaListener(topics = {"avro"})
+  @KafkaListener(topics = {"transaction"})
   public void consume(ConsumerRecord<Integer, Transaction> record) {
     System.out.println("received = " + record.value() + " with key " + record.key());
   }
