@@ -170,7 +170,14 @@ Java
 4. Test what if you change the the topic from transaction to consumer in **Producer Transaction** code
 
 Python
-1. Fill out the credential and endpoint by creating .env
+1. Fill out the credential and endpoint by creating **.env** on Python directory
+```bash
+BOOTSTRAP_SERVER="<BOOTSTRAP SERVER ENDPOINT>"
+CONFLUENT_API_KEY="<CONFLUENT API KEY>"
+CONFLUENT_API_SECRET="<CONFLUENT API SECRET>"
+SCHEMA_REGISTRY_URL="<SCHEMA REGISTRY URL>"
+SCHEMA_REGISTRY_CREDENTIAL="<SCHEMA REGISTRY API KEY>:<SCHEMA REGISTRY API SECRET>"
+```
 2. Run the **Producer Transaction** first and run the **Consumer Transaction** after that
 3. Next, run the **Producer User** first and run the **Consumer User** after that
 4. Test what if you change the the topic from transaction to consumer in **Producer Transaction** code
