@@ -32,7 +32,7 @@ public class Producer {
       final String fullname = faker.name().fullName();
       final String phone_number = faker.phoneNumber().cellPhone();
       User send_value = new User(formatted_cust_id,formatted_ktp,fullname,phone_number);
-      template.send("avro",formatted_ktp, send_value);
+      template.send("user",formatted_ktp, send_value);
       System.out.println("Sent "+send_value);
       try {
         Thread.sleep(100); // Sleep for 5 seconds
