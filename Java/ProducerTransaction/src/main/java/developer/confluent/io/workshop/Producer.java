@@ -32,10 +32,10 @@ public class Producer {
       String formatted_card_number = card_number.replaceAll("-", "");
       final String amount = faker.commerce().price();
       Transaction send_value = new Transaction(formatted_cust_id,trans_id,formatted_card_number,amount);
-      template.send("avro",formatted_card_number, send_value);
+      template.send("transaction",formatted_card_number, send_value);
       System.out.println("Sent "+send_value);
       try {
-        Thread.sleep(100); // Sleep for 5 seconds
+        Thread.sleep(100); // Sleep for 100 miliseconds
       } catch (InterruptedException e) {
           Thread.currentThread().interrupt();
       }
